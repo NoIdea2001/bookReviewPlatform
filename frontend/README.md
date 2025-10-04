@@ -4,6 +4,11 @@
 
 This Vite + React application delivers the user experience for the Book Review Platform. It connects to the Express/MongoDB backend, letting readers browse community-curated titles, share reviews, and manage their personal library with a polished, responsive UI.
 
+## Live Deployment
+
+- Frontend (Vercel): https://book-review-platform-lyart.vercel.app/
+- Backend API (Vercel): https://book-review-platform-backend-two.vercel.app/
+
 ## Highlights
 
 - **Authentication-aware routing** using React Router, Zustand, and protected routes.

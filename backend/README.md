@@ -4,6 +4,11 @@
 
 This Express + MongoDB service powers the Book Review Platform. It provides authenticated APIs for managing users, books, and reviews, complete with pagination, search, sorting, and aggregated rating data.
 
+## Live Deployment
+
+- Frontend (Vercel): https://book-review-platform-lyart.vercel.app/
+- Backend API (Vercel): https://book-review-platform-backend-two.vercel.app/
+
 ## Tech Stack
 
 - Node.js 18+

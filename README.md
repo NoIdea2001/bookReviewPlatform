@@ -2,6 +2,11 @@
 
 Full-stack MERN application where readers can discover books, share reviews, and keep track of their contributions.
 
+## Deployed Links
+
+- Frontend (Vercel): https://book-review-platform-lyart.vercel.app/
+- Backend API (Vercel): https://book-review-platform-backend-two.vercel.app/
+
 ## Features
 
 - 🔐 **Authentication** – Sign up, log in, and persist JWT sessions securely.
