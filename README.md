@@ -57,8 +57,8 @@ The frontend expects the API to be available at `/api`. When running both server
 - **Seed data:** `npm run seed` (backend) clears and repopulates demo users/books/reviews.
 - **API docs:** See `backend/README.md` and the Postman collection for endpoints and request samples.
 - **Deployment tips:**
-  - Backend: Render, Railway, or Heroku (set environment variables and connect to MongoDB Atlas).
-  - Frontend: Vercel or Netlify (`npm run build` inside `frontend`).
+  - **Backend on Vercel:** The repo includes `backend/api/index.js` and `backend/vercel.json` so you can deploy the API as a serverless function. Link the project with the Vercel CLI, add `MONGODB_URI`, `JWT_SECRET`, and `JWT_EXPIRE` via `vercel env`, then run `vercel deploy --prod`.
+  - **Frontend on Vercel/Netlify:** Build with `npm run build` inside `frontend`. Supply `VITE_API_URL` (e.g. `https://<your-backend>.vercel.app/api`) so the client calls the deployed backend.
 
 ## Testing Checklist
 

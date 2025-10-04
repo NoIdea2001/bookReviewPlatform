@@ -1,8 +1,13 @@
 import axios from "axios";
 import { useAuth } from "../state/auth.store.js";
 
+const resolvedBaseURL = (
+  (import.meta.env?.VITE_API_URL ?? "/api") ||
+  "/api"
+).replace(/\/$/, "");
+
 const apiClient = axios.create({
-  baseURL: "/api",
+  baseURL: resolvedBaseURL,
   withCredentials: false,
 });
 

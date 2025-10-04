@@ -103,9 +103,36 @@ Errors surface as JSON responses:
 
 During development the stack trace is included to aid debugging.
 
+## Deploying to Vercel
+
+This project ships with a serverless entry point in `api/index.js` and a `vercel.json` configuration so it can be deployed directly to Vercel's Node.js 18 runtime.
+
+1. **Install the Vercel CLI** (one time)
+   ```bash
+   npm install -g vercel
+   ```
+2. **Log in and link the project**
+   ```bash
+   vercel login
+   vercel link
+   ```
+3. **Configure environment variables**
+   ```bash
+   vercel env add MONGODB_URI
+   vercel env add JWT_SECRET
+   vercel env add JWT_EXPIRE
+   ```
+   Use the same values you would place in `.env`. Repeat the command for each Vercel environment (development, preview, production) as needed.
+4. **Deploy**
+   ```bash
+   vercel deploy --prod
+   ```
+
+Vercel will expose your API under `https://<your-backend>.vercel.app/api/...`. Reuse the generated URL when configuring the frontend (see `frontend/README.md`). MongoDB Atlas should allow outbound connections from Vercel; if you use IP allowlists, add the [Vercel egress ranges](https://vercel.com/docs/infrastructure/ips).
+
 ## Next Steps
 
 - Build the React frontend and connect to these APIs
 - Add integration tests (e.g. using Jest + Supertest)
-- Optionally deploy the backend (Render/Heroku/AWS) and expose Postman documentation
+- Explore hosting options beyond Vercel (Render, Railway, Fly.io) if you need persistent workers
 - Explore the included Postman collection at `../book-review-platform.postman_collection.json` for quick endpoint testing.
